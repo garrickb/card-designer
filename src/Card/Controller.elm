@@ -1,9 +1,10 @@
 module Card.Controller exposing (..)
 
-import Card.Model exposing (Attribute, Card)
+import Data.Card exposing (Card)
+import Data.Card.Attribute exposing (Attribute)
 import Dict
 
 
-getValue : Card -> String -> Maybe String
-getValue card key =
+maybeGetAttributeValue : Card -> String -> Maybe String
+maybeGetAttributeValue card key =
     Dict.get key (Dict.fromList card.attributes)

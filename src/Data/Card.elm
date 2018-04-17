@@ -1,8 +1,6 @@
-module Card.Model exposing (..)
+module Data.Card exposing (Card)
 
-
-type alias Attribute =
-    ( String, String )
+import Data.Card.Attribute exposing (Attribute)
 
 
 type alias Card =

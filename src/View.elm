@@ -1,6 +1,7 @@
 module View exposing (..)
 
 import Card.View exposing (drawCards)
+import CardTemplate.View exposing (drawCardTemplate)
 import Html exposing (Html, div, h1, text)
 import Html.Attributes exposing (style)
 import Html.Events
@@ -16,7 +17,8 @@ rootView model =
             ]
         ]
         [ h1 [] [ text "Card Designer" ]
-        , drawCards model.cards
+        , drawCardTemplate model.template
+        , drawCards model.cards model.template
         , div []
             [ Html.button
                 [ Html.Events.onClick State.AddCard ]
